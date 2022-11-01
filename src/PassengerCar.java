@@ -1,5 +1,7 @@
 public class PassengerCar extends Car implements Competing{
 
+    public enum Body{Sedan, Hatchback, Coupe, WagonCar, SUV, Crossover, Pickup, Van, Minivan}
+
     private static final double COEF = 2;
 
     public PassengerCar(String brand, String model, double engVolume) {

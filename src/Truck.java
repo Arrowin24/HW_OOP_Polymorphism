@@ -1,4 +1,6 @@
 public class Truck extends Car implements  Competing{
+
+    public enum LoadCapacity{N1, N2, N3}
     private static final double COEF = 0.5;
     public Truck(String brand, String model, double engVolume) {
         super(brand, model, engVolume);

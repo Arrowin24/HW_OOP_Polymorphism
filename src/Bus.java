@@ -1,4 +1,5 @@
 public class Bus extends Car implements Competing{
+    public enum CapacityType{ExtraSmall, Small, Middle, Big, ExtraBig}
     private static final double COEF = 1;
     public Bus(String brand, String model, double engVolume) {
         super(brand, model, engVolume);
