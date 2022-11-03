@@ -1,6 +1,25 @@
 public class Truck extends Car implements  Competing{
 
-    public enum LoadCapacity{N1, N2, N3}
+    public enum LoadCapacity{
+        N1(0,3.5),
+        N2(3.5,12),
+        N3(12,Double.MAX_VALUE);
+        double minLoad;
+        double maxLoad;
+
+        LoadCapacity(double minLoad, double maxLoad) {
+            this.minLoad = minLoad;
+            this.maxLoad = maxLoad;
+        }
+
+        public double getMinLoad() {
+            return minLoad;
+        }
+
+        public double getMaxLoad() {
+            return maxLoad;
+        }
+    }
     private static final double COEF = 0.5;
     public Truck(String brand, String model, double engVolume) {
         super(brand, model, engVolume);

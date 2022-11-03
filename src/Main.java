@@ -11,10 +11,10 @@ public class Main {
         Truck truck3 = new Truck("High","tr6",4);
         Truck truck4 = new Truck("Toyota","M4",3);
 
-        Bus bus1 = new Bus("VV","T5",2);
-        Bus bus2 = new Bus("VV","T6",3);
-        Bus bus3 = new Bus("VV","T5",2);
-        Bus bus4 = new Bus("VV","T5",2);
+        Bus bus1 = new Bus("VV","T5",2, Bus.CapacityType.Small);
+        Bus bus2 = new Bus("VV","T6",3, Bus.CapacityType.Big);
+        Bus bus3 = new Bus("VV","T5",2, Bus.CapacityType.ExtraBig);
+        Bus bus4 = new Bus("VV","T5",2, Bus.CapacityType.Middle);
 
         //Проверка 2 и 3 домашки
         Car[] cars = {car1, car2, truck2, truck3,bus4};
