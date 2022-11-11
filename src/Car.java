@@ -1,13 +1,15 @@
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 public abstract class Car {
     private String brand;
     private String model;
     private double engVolume;
 
-    private ArrayList<Sponsor> sponsors = new ArrayList<>();
+    private Set<Sponsor> sponsors = new HashSet<>();
     private Driver<DriverLicence> driver;
-    private ArrayList<Mechanic> mechanics = new ArrayList<>();
+    private Set<Mechanic> mechanics = new HashSet();
 
     public Car(String brand, String model, double engVolume) {
         if (!brand.isBlank()) {
@@ -55,11 +57,11 @@ public abstract class Car {
         this.model = model;
     }
 
-    public ArrayList<Sponsor> getSponsors() {
+    public Set<Sponsor> getSponsors() {
         return sponsors;
     }
 
-    public void setSponsors(ArrayList<Sponsor> sponsors) {
+    public void setSponsors(Set<Sponsor> sponsors) {
         this.sponsors = sponsors;
     }
 
@@ -75,7 +77,7 @@ public abstract class Car {
         }
     }
 
-    public ArrayList<Mechanic> getMechanics() {
+    public Set<Mechanic> getMechanics() {
         return mechanics;
     }
 
