@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Main {
     public static void main(String[] args) {
@@ -48,7 +50,7 @@ public class Main {
         Sponsor sponsor3 = new Sponsor("SoShin", 120);
 
 
-        ArrayList<Car> raceMember = new ArrayList<>();
+        Set<Car> raceMember = new HashSet<>();
         raceMember.add(car2);
         raceMember.add(truck1);
         raceMember.add(bus1);
@@ -92,7 +94,5 @@ public class Main {
         }
 
         serviceStation.doService();
-
-
     }
 }

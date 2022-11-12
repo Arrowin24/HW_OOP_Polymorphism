@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Mechanic {
     String name;
     String company;
@@ -21,4 +23,14 @@ public class Mechanic {
                 + " " + repairCar.getModel());
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        Mechanic mechanic = (Mechanic) obj;
+        return mechanic.name.equals(name)&&mechanic.company.equals(company)&&mechanic.repairCar.equals(repairCar);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, company, repairCar);
+    }
 }
